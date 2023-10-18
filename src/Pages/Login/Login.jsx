@@ -37,8 +37,6 @@ const Login = () => {
         toast.error(`${err.message}`);
       });
 
-
-
   }
 
   return (
