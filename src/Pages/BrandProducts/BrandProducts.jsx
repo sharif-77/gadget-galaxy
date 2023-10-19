@@ -53,7 +53,7 @@ const BrandProducts = () => {
                     products.map(product=><BrandProduct key={product._id}  product={product}/>)
                 }
                 </div>
-                <div className='flex justify-center items-center text-5xl my-40 font-bold'>
+                <div className='flex justify-center items-center text-5xl mb-20 font-bold'>
                 {
                     products.length==0&&<p>This Brand Has No any Available Products Right Now</p>
                         

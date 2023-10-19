@@ -11,7 +11,7 @@ const UpComingProduct = ({product}) => {
           />
         </figure>
         <div className="card-body text-center">
-          <h2 className="card-title text-center">Brad : {product.brand_name}</h2>
+          <h2 className="card-title text-center">Brand : {product.brand_name}</h2>
         </div>
       </div>
             

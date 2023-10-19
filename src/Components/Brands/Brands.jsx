@@ -13,10 +13,10 @@ const Brands = () => {
         .then(res=>setBrands(res))
     },[])
     return (
-        <div className="w-4/5 mx-auto my-20">
+        <div className="w-4/5 mx-auto my-10">
 
             <p className={`${mode?`  dark:text-white `:'text-black'} my-10 text-center text-3xl font-bold  `}>Chose Your Favorite Brand</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"> 
+            <div className="grid grid-cols-1  lg:grid-cols-3 gap-5"> 
                 {brands.map(brand=><Brand key={brand._id} brand={brand} />)}
             </div>
             
