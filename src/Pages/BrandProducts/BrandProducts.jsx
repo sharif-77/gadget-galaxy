@@ -22,7 +22,6 @@ const BrandProducts = () => {
         .then(res=>res.json())
         .then(allData=>{
             const filteredData=allData.filter(product=>product.brandName==lowerBrand)
-            console.log(filteredData);
             setProducts(filteredData)
             setLoading(false)
         })

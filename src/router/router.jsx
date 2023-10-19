@@ -6,9 +6,9 @@ import Login from "../Pages/Login/Login";
 import Register from './../Pages/Register/Register';
 import AddProducts from "../Pages/AddProducts/AddProducts";
 import BrandProducts from "../Pages/BrandProducts/BrandProducts";
-import Cart from "../Pages/Cart/Cart";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
+import Carts from "../Pages/Cart/Carts";
 
 const router = createBrowserRouter([
     {
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/cart',
-                element:<PrivetRoute><Cart/></PrivetRoute>
+                element:<PrivetRoute><Carts/></PrivetRoute>
             },
             {
                 path:'/details/:id',

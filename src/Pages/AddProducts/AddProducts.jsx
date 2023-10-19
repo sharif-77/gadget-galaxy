@@ -35,15 +35,7 @@ const AddProducts = () => {
     .then(res=>console.log(res))
     .catch(err=>console.error(err))
 
-    console.log(
-      name,
-      image,
-      brandName,
-      productType,
-      price,
-      description,
-      ratting
-    );
+  
   };
 
   return (
