@@ -25,7 +25,7 @@ const Navbar = () => {
            <div className="flex items-center gap-5 ">
                    <NavLink to='/' className={({isActive})=>`${isActive&&`  bg-[#220032] text-white `} py-2 px-5 rounded-md font-bold `}>Home</NavLink>
                    <NavLink to='/addProducts' className={({isActive})=>`${isActive&&`  bg-[#220032] text-white  `} py-2 px-5 rounded-md font-bold`}>Ad product </NavLink>
-                   <NavLink to='/cart' className={({isActive})=>`${isActive&&`  bg-[#220032] text-white `} py-2 px-5 rounded-md font-bold `}>Cart</NavLink>
+                   <NavLink to='/cart' className={({isActive})=>`${isActive&&`  bg-[#220032] text-white `} py-2 px-5 rounded-md font-bold `}>My Cart</NavLink>
                 
                    
            </div>

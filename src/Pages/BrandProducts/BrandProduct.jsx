@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const BrandProduct = ({product}) => {
-    const {image,name,description}=product
+    const {_id,image,name,description}=product
     const {mode}=useContext(AuthContext)
   return (
 
@@ -19,7 +20,7 @@ const BrandProduct = ({product}) => {
           <h2 className={`${mode?`dark:text-black`:`text-black`} card-title`}>{name}</h2>
           <p className={`${mode&&`text-black`} min-h-[100px]`}>{description}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">See Details</button>
+            <Link to={`/details/${_id}`}  className="btn btn-primary">See Details</Link>
           </div>
         </div>
       </div>

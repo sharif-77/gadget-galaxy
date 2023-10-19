@@ -4,14 +4,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
-import { useContext, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BrandProduct from "./BrandProduct";
-import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 
 const BrandProducts = () => {
-  const {mode}=useContext(AuthContext)
+
+    const [loading,setLoading]=useState(true)
 
 
     const {brand}=useParams()
@@ -24,10 +24,15 @@ const BrandProducts = () => {
             const filteredData=allData.filter(product=>product.brandName==lowerBrand)
             console.log(filteredData);
             setProducts(filteredData)
+            setLoading(false)
         })
     },[lowerBrand])
  
 
+    if (loading) {
+        return <p className='text-center mb-10 font-bold'>Data is loading....</p>
+        
+    }
     
 
 

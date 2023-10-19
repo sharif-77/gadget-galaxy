@@ -39,8 +39,6 @@ const Footer = () => {
               <li>Chat With Us</li>
               <li>Product Help</li>
               <li>Order Help</li>
-              <li> Hassle free Service</li>
-              <li>High professionalism and dedication.</li> 
             </ul>
           </div>
 
