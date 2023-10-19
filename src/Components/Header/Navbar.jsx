@@ -10,7 +10,7 @@ const Navbar = () => {
    
     }
     return (
-       <div className={`${mode&&`  dark:bg-black text-white `} `} >
+       <div className={`${mode?`  dark:bg-black text-white `:''} `} >
 
          <div className="w-4/5 mx-auto py-5">
          

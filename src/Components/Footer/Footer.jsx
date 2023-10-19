@@ -7,9 +7,9 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Footer = () => {
   const {mode}=useContext(AuthContext)
   return (
-   <div className={`${mode&&`  dark:bg-black text-white `} `}>
+   <div className={`${mode?`  dark:bg-black text-white `:''} `}>
 
-     <div className={`${mode?`  dark:bg-black ` :`bg-[#032b45]`} w-full min-h-[30vh]  mt-10 text-white`}>
+     <div className={`${mode?`  dark:bg-black ` :`bg-[#032b45]`} w-full min-h-[30vh]  py-10 text-white`}>
       <div className="w-4/5 mx-auto py-10">
         <main className="flex flex-col lg:grid grid-cols-3 gap-10  justify-between mt-5">
           <div>

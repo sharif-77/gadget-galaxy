@@ -6,7 +6,7 @@ const BrandProduct = ({product}) => {
     const {mode}=useContext(AuthContext)
   return (
 
-    <div >
+    <div>
       <div className="card card-compact  bg-base-100 shadow-xl">
         <figure>
           <img
@@ -16,7 +16,7 @@ const BrandProduct = ({product}) => {
           />
         </figure>
         <div className="card-body">
-          <h2 className={`${mode&&`text-black`} card-title`}>{name}</h2>
+          <h2 className={`${mode?`dark:text-black`:`text-black`} card-title`}>{name}</h2>
           <p className={`${mode&&`text-black`} min-h-[100px]`}>{description}</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">See Details</button>

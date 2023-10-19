@@ -4,12 +4,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BrandProduct from "./BrandProduct";
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 
 const BrandProducts = () => {
+  const {mode}=useContext(AuthContext)
+
 
     const {brand}=useParams()
     const lowerBrand=brand.toLowerCase()
@@ -29,7 +32,7 @@ const BrandProducts = () => {
 
 
     return (
-        <div >
+        <div>
 
             <div>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper " >
@@ -41,6 +44,8 @@ const BrandProducts = () => {
             
         </Swiper>
             </div>
+
+            
 
             <div className="w-4/5 mx-auto my-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -55,6 +60,7 @@ const BrandProducts = () => {
                     
                 }
                 </div>
+
             </div>
             
         </div>

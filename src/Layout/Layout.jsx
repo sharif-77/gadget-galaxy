@@ -10,7 +10,8 @@ const Layout = () => {
 
   const {mode}=useContext(AuthContext)
   return (
-    <div className={`${mode&&`  dark:bg-black text-white `} `}>
+    // <div className={`${mode?`  dark:bg-black text-white dark `:''} `}>
+    <div className='dark'>
       <Navbar />
       <Outlet />
       <Footer/>
