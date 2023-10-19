@@ -8,6 +8,7 @@ export const AuthContext=createContext()
 const AuthProvider = ({children}) => { 
     const [user,setUser]=useState(null)
     const [loading,setLoading]=useState(true)
+    const [mode,setMode]=useState(true)
 
     useEffect(()=>{
         const unSubscribe=onAuthStateChanged(auth, (currentUser) => {
@@ -49,7 +50,9 @@ const AuthProvider = ({children}) => {
        signInWithGoogle,
        update,
        logOutUser,
-       loading
+       loading,
+       mode,
+       setMode
     }
     return (
         <div>

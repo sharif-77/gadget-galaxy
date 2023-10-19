@@ -4,7 +4,7 @@ import Brands from '../../Components/Brands/Brands';
 
 const Home = () => {
     return (
-        <div className='py-10'>
+        <div className='py-10 '>
             <Banner/>
             <Brands/>
             
