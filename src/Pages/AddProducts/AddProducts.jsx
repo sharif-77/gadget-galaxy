@@ -24,18 +24,16 @@ const AddProducts = () => {
       ratting,
     };
 
-    fetch('http://localhost:5000/products',{
-      method:'POST',
-      headers:{
-        'content-type':'application/json'
+    fetch("https://gadget-galaxy-server-nine.vercel.app/products", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
       },
-      body:JSON.stringify(productsInfo)
+      body: JSON.stringify(productsInfo),
     })
-    .then(res=>res.json())
-    .then(res=>console.log(res))
-    .catch(err=>console.error(err))
-
-  
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err));
   };
 
   return (
