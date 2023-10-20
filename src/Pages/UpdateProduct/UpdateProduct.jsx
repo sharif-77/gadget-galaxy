@@ -2,9 +2,16 @@ import { useLoaderData } from "react-router-dom";
 
 const UpdateProduct = () => {
   const dataForUpdate = useLoaderData();
-  const { name, image, brandName, productType, price, description, ratting } =
-    dataForUpdate;
-  console.log(dataForUpdate);
+  const {
+    _id,
+    name,
+    image,
+    brandName,
+    productType,
+    price,
+    description,
+    ratting,
+  } = dataForUpdate;
 
   const handleUpdateProduct = (e) => {
     e.preventDefault();
@@ -27,31 +34,20 @@ const UpdateProduct = () => {
       ratting,
     };
 
-    fetch("https://gadget-galaxy-server-nine.vercel.app/products", {
+  
+
+    fetch(`https://gadget-galaxy-server-nine.vercel.app/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(productsInfo),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log(res))
-      .catch((err) => console.error(err));
-
-    console.log(
-      name,
-      image,
-      brandName,
-      productType,
-      price,
-      description,
-      ratting
-    );
+    });
   };
   return (
     <div className="mb-40 mx-5 ">
       <div className="shadow-xl  p-10 w-full md:w-3/5 lg:w-2/5 bg-[#220032] text-white m-auto mt-28 rounded ">
-        <p className="text-center my-10 text-xl font-bold">Add Product</p>
+        <p className="text-center my-10 text-xl font-bold">Update Product</p>
         <form onSubmit={handleUpdateProduct} className="w-full space-y-5">
           <div className="flex flex-col gap-2">
             <label htmlFor="name"> Name</label>
@@ -156,7 +152,7 @@ const UpdateProduct = () => {
               className="bg-[#14c898f3] py-2 px-4 rounded-md  font-bold mt-5"
               type="submit"
             >
-              Add Product
+              Update
             </button>
           </div>
         </form>
