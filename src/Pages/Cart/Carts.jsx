@@ -1,17 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CartItem from "./CartItem";
+import { AuthContext } from "./../../AuthProvider/AuthProvider";
 
 const Carts = () => {
+  const { user } = useContext(AuthContext);
+  const email = user?.email;
   const [loading, setLoading] = useState(true);
   const [cartImtems, setCartItems] = useState([]);
   useEffect(() => {
-    fetch("https://gadget-galaxy-server-nine.vercel.app/carts")
+    fetch(`https://gadget-galaxy-server-nine.vercel.app/carts/${email}`)
       .then((res) => res.json())
       .then((res) => {
         setCartItems(res);
         setLoading(false);
       });
-  }, []);
+  }, [email]);
 
   if (loading) {
     return <p className="text-center mb-10 font-bold">Data is loading....</p>;

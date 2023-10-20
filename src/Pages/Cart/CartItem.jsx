@@ -7,7 +7,6 @@ const CartItem = ({ product, cartImtems, setCartItems }) => {
       .then((res) => {
         const remain = cartImtems.filter((item) => item._id !== product._id);
         setCartItems(remain);
-        console.log(res);
       });
   };
 

@@ -1,12 +1,17 @@
 import toast from "react-hot-toast";
 import { Link, useLoaderData } from "react-router-dom";
+import { AuthContext } from './../../AuthProvider/AuthProvider';
+import { useContext } from "react";
 
 const ProductDetails = () => {
+  const {user}=useContext(AuthContext)
+  const email=user?.email
   const product = useLoaderData();
+
   const {_id, name, image, brandName, productType, price, description, ratting } =
     product;
 
-  const forCart = { name, image, price };
+  const forCart = { name, image, price,email };
 
   const handleAddToCart = () => {
     fetch("https://gadget-galaxy-server-nine.vercel.app/carts", {
