@@ -21,7 +21,7 @@ const Carts = () => {
   }
 
   return (
-    <div className="w-4/5 mx-auto my-20 mb-60 dark:text-white text-black">
+    <div className="w-4/5 mx-auto my-20 mb-60  text-black">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {cartImtems.map((item) => (
           <CartItem

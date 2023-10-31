@@ -6,7 +6,7 @@ const BrandProduct = ({product}) => {
   return (
 
     <div>
-      <div className="card card-compact  bg-base-100 shadow-xl">
+      <div className="card card-compact  bg-base-100 shadow-xl text-black">
         <figure>
           <img
           className="min-h-[300px] max-h-[300px] "
