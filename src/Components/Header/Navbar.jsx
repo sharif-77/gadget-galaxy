@@ -1,16 +1,17 @@
 import {  NavLink } from "react-router-dom";
 import { useContext } from 'react';
 import { AuthContext } from './../../AuthProvider/AuthProvider';
-import { MdNightlight,MdOutlineLightMode } from 'react-icons/md';
+// import { MdNightlight,MdOutlineLightMode } from 'react-icons/md';
+import Theme from "../../Theme/Theme";
 
 const Navbar = () => {
-    const {user,logOutUser,mode,setMode}=useContext(AuthContext)
+    const {user,logOutUser}=useContext(AuthContext)
     const handleLogOut=()=>{
         logOutUser()
    
     }
     return (
-       <div className={`${mode?`  dark:bg-black text-white `:''} `} >
+       <div >
 
          <div className="w-4/5 mx-auto py-5">
          
@@ -31,12 +32,11 @@ const Navbar = () => {
            </div>
 
            <div className="flex items-center justify-center gap-3  ">
-               <div onClick={()=>setMode(!mode)}>
-                  {
-                   mode?<MdOutlineLightMode className="text-2xl" />:<MdNightlight className="text-2xl" />
-                   
-                  }
-               </div>
+               
+                
+
+                  <Theme/>
+             
                <span className="font-bold">{user?.displayName&&user.displayName}</span>
 
                <div className="avatar">

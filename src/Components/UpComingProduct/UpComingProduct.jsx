@@ -10,7 +10,7 @@ const UpComingProduct = ({product}) => {
             alt="Logo"
           />
         </figure>
-        <div className="card-body text-center">
+        <div className="card-body text-center text-black">
           <h2 className="card-title text-center">Brand : {product.brand_name}</h2>
         </div>
       </div>

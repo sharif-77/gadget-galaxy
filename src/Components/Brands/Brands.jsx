@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { useEffect } from "react";
 import Brand from "./Brand";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+// import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Brands = () => {
-  const { mode } = useContext(AuthContext);
+  // const { mode } = useContext(AuthContext);
 
   const [brands, setBrands] = useState([]);
   useEffect(() => {
@@ -15,9 +15,7 @@ const Brands = () => {
   return (
     <div className="w-4/5 mx-auto my-10">
       <p
-        className={`${
-          mode ? `  dark:text-white ` : "text-black"
-        } my-10 text-center text-3xl font-bold  `}
+        className="my-10 text-center text-3xl font-bold  dark:text-white "
       >
         Chose Your Favorite Brand
       </p>

@@ -13,7 +13,7 @@ const Brand = ({brand}) => {
           />
         </figure>
         <div className="card-body text-center">
-          <h2 className="card-title text-center">{brand.brand_name}</h2>
+          <h2 className="card-title text-center text-black">{brand.brand_name}</h2>
         </div>
       </div>
       </Link>

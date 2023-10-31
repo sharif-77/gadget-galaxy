@@ -14,9 +14,7 @@ const UpComingProducts = () => {
   return (
     <div className="w-4/5 mx-auto my-10 ">
       <p
-        className={`${
-          mode ? `  dark:text-white ` : "text-black"
-        } my-10 text-center text-3xl font-bold  `}
+        className="my-10 text-center text-3xl font-bold "
       >
         Our Upcoming Products
       </p>
